@@ -25,7 +25,7 @@ DELETE CONTENT
 
 
   
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
     // Delete
     const errKeys = Object.keys(formData).filter((key) => {
@@ -72,96 +72,12 @@ DELETE CONTENT
 
 
 
-  <h3> User Form </h3>
-      <Box
-        component="form"
-        sx={{
-          "& > :not(style)": { m: 1, width: "30ch" },
-        }}
-        autoComplete="off"
-        onSubmit={(e) => handleSubmit(e)}
-      >
-        <TextField
-          id="name"
-          label="Name"
-          variant="standard"
-          value={formData.name}
-          name="name"
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <span style={{ color: "red" }}>{formData.error.name}</span>
-        <br />
-        <TextField
-          id="age"
-          label="Age"
-          variant="standard"
-          type="number"
-          name="age"
-          value={formData.age}
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <span style={{ color: "red" }}>{formData.error.age}</span>
-        <br />
-        <TextField
-          id="email"
-          type="email"
-          label="Email"
-          variant="standard"
-          name="email"
-          value={formData.email}
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <span style={{ color: "red" }}>{formData.error.email}</span>
-        <br />
-        <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
-        <RadioGroup
-          aria-labelledby="demo-radio-buttons-group-label"
-          name="gender"
-          value={formData.gender}
-          onChange={(e) => handleChange(e)}
-        >
-          <FormControlLabel value="Female" control={<Radio />} label="Female" />
-          <FormControlLabel value="Male" control={<Radio />} label="Male" />
-          <FormControlLabel value="Other" control={<Radio />} label="Other" />
-        </RadioGroup>
-        <br />
-        <span style={{ color: "red" }}>{formData.error.gender}</span>
-        
-        <TextField
-          id="mobilenumber"
-          type="mobilenumber"
-          label="mobilenumber"
-          variant="standard"
-          name="mobilenumber"
-          value={formData.mobilenumber}
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <span style={{ color: "red" }}>{formData.error.mobilenumber}</span>
-        <br />
-        <Button variant="contained" type="submit">
-          Submit
-        </Button>
-      </Box>
 
 
+UPDATE
 
 
-
-      const handleChange = (e) => {
-    let error = { ...formData.error };
-    if (e.target.value === "") {
-      error[e.target.name] = `${e.target.name} is Required`;
-    } else {
-      error[e.target.name] = "";
-    }
-    setFormData({ ...formData, [e.target.name]: e.target.value, error });
-  };
-
-  const onPopulateData = (id) => {
+     const onPopulateData = (id) => {
     const selectedData = userData.filter((row) => row.id === id)[0];
     setFormData({
       ...formData,
