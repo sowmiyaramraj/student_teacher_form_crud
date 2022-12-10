@@ -10,7 +10,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import { useNavigate,Link,useParams } from 'react-router-dom';
-function Signupstudent() {
+function Signupmentor() {
   let formValues = {
     id: "",
     name: "",
@@ -162,4 +162,4 @@ const handleSubmit = async (e) => {
   );
 }
 
-export default Signupstudent;
+export default Signupmentor;

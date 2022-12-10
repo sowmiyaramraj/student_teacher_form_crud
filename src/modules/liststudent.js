@@ -20,7 +20,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import { useNavigate,Link,useParams } from 'react-router-dom';
-function Listmentor() {
+function Liststudent() {
   let formValues = {
     id: "",
     name: "",
@@ -91,4 +91,4 @@ function Listmentor() {
   );
 }
 
-export default Listmentor;
+export default Liststudent;
