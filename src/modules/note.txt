@@ -24,52 +24,7 @@ DELETE CONTENT
   CREATE  
 
 
-  
-const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Delete
-    const errKeys = Object.keys(formData).filter((key) => {
-      if (formData[key] === "" && key != "error" && key != "id") {
-        return key;
-      }
-    });
-    if (errKeys.length >= 1) {
-      alert("Please fill all values");
-    } else {
-      if (formData.id) {
-        // Update
-        const response = await axios.put(
-          `https://632f42ebb56bd6ac45adc26a.mockapi.io/user/${formData.id}`,
-          {
-            name: formData.name,
-            age: formData.age,
-            email: formData.email,
-            gender: formData.gender,
-            mobilenumber: formData.mobilenumber,
-          }
-        );
-        let users = [...userData];
-        let index = users.findIndex((row) => row.id === response.data.id);
-        users[index] = response.data;
-        setUserData(users);
-      } else {
-        // Create
-        const response = await axios.post(
-          "https://632f42ebb56bd6ac45adc26a.mockapi.io/user",
-          {
-            name: formData.name,
-            age: formData.age,
-            email: formData.email,
-            gender: formData.gender,
-            mobilenumber: formData.mobilenumber,
-          }
-        );
-        setUserData([...userData, response.data]);
-      }
-      setFormData(formValues);
-    }
-  };
-
+ 
 
 
 
@@ -77,10 +32,4 @@ const handleSubmit = async (e) => {
 UPDATE
 
 
-     const onPopulateData = (id) => {
-    const selectedData = userData.filter((row) => row.id === id)[0];
-    setFormData({
-      ...formData,
-      ...selectedData,
-    });
-  };
+    
