@@ -20,8 +20,8 @@ function App() {
         <Route path="/signupmentor" element={<Signupmentor/>}/>
         <Route path="/liststudent" element={<Liststudent/>}/>
         <Route path="/listmentor" element={<Listmentor/>}/>
-        <Route path="/updatestudent" element={<Updatestudent/>}/>
-        <Route path="/updatementor" element={<Updatementor/>}/>
+        <Route path="/updatestudent/:userId" element={<Updatestudent/>}/>
+        <Route path="/updatementor/:userId" element={<Updatementor/>}/>
         <Route path="/deletestudent" element={<Deletestudent/>}/>
         <Route path="/deletementor" element={<Deletementor/>}/>
       </Routes>

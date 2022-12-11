@@ -20,7 +20,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import { useNavigate,Link,useParams } from 'react-router-dom';
-function Liststudent() {
+function Updatementor() {
   const navigate=useNavigate();
   const params=useParams();
   let formValues = {
@@ -230,4 +230,4 @@ const handleSubmit = async (e) => {
   );
 }
 
-export default Liststudent;
+export default Updatementor;
