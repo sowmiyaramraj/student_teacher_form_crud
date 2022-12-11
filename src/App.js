@@ -24,8 +24,8 @@ function App() {
         <Route path="/listmentor" element={<Listmentor/>}/>
         <Route path="/updatestudent/:userId" element={<Updatestudent/>}/>
         <Route path="/updatementor/:userId" element={<Updatementor/>}/>
-        <Route path="/deletestudent" element={<Deletestudent/>}/>
-        <Route path="/deletementor" element={<Deletementor/>}/>
+        <Route path="/deletestudent/:userid" element={<Deletestudent/>}/>
+        <Route path="/deletementor/:userid" element={<Deletementor/>}/>
         <Route path="/profile/:userId" element={<Viewprofile/>}/>
         <Route path="/updateprofile/:userId" element={<Updateprofile/>}/>
 
