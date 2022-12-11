@@ -10,6 +10,8 @@ import Updatementor from "./modules/updatementor";
 import Deletestudent from "./modules/deletestudent";
 import Deletementor from "./modules/deletementor";
 import Dashboard from "./modules/dashboard";
+import Viewprofile from './modules/viewprofile';
+import Updateprofile from "./modules/updateprofile";
 function App() {
   return (
   <div>
@@ -24,6 +26,9 @@ function App() {
         <Route path="/updatementor/:userId" element={<Updatementor/>}/>
         <Route path="/deletestudent" element={<Deletestudent/>}/>
         <Route path="/deletementor" element={<Deletementor/>}/>
+        <Route path="/profile/:userId" element={<Viewprofile/>}/>
+        <Route path="/updateprofile/:userId" element={<Updateprofile/>}/>
+
       </Routes>
     </Router>
   </div>

@@ -10,6 +10,9 @@ import Updatestudent from "./updatestudent";
 import Updatementor from "./updatementor";
 import Deletestudent from "./deletestudent";
 import Deletementor from "./deletementor";
+import Viewprofile from './viewprofile';
+import Updateprofile from "./updateprofile";
+
 
 function Dashboard() {
     return (
@@ -24,6 +27,10 @@ function Dashboard() {
         <Link to="/updatementor" element={<Updatementor/>}>Update mentor</Link>&nbsp;<br/>
         <Link to="/deletestudent" element={<Deletestudent/>}>Delete student</Link>&nbsp;<br/>
         <Link to="/deletementor" element={<Deletementor/>}>Delete mentor</Link>&nbsp;<br/>
+        <Link to="/profile" element={<Viewprofile/>}>Profile</Link>&nbsp;<br/>
+        <Link to="/updateprofile" element={<Updateprofile/>}>Update Profile</Link>&nbsp;<br/>
+
+        
         </h2>
     </>
     );
